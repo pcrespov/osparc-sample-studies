@@ -1,0 +1,51 @@
+!!python/object/apply:collections.OrderedDict
+- - - type
+    - TEMPLATE
+  - - uuid
+    - 003aaf4a-524a-11ea-b061-02420a00070b
+  - - name
+    - '[ISAN] 2D plot'
+  - - description
+    - ''
+  - - thumbnail
+    - ''
+  - - prj_owner
+    - '1'
+  - - creation_date
+    - '2020-02-18 12:27:17.312'
+  - - last_change_date
+    - '2020-02-18 12:32:01.739'
+  - - workbench
+    - bbff4cbb-1797-487b-ac58-089952ef278e:
+        inputNodes:
+        - e9798b9b-c354-4eae-ba93-106128fb79fa
+        inputs:
+          input_1:
+            nodeUuid: e9798b9b-c354-4eae-ba93-106128fb79fa
+            output: outFile
+        key: simcore/services/dynamic/raw-graphs
+        label: 2D plot
+        position:
+          x: 371
+          y: 95
+        thumbnail: ''
+        version: 2.10.4
+      e9798b9b-c354-4eae-ba93-106128fb79fa:
+        inputNodes: []
+        inputs: {}
+        key: simcore/services/frontend/file-picker
+        label: File Picker
+        outputs:
+          outFile:
+            dataset: 003aaf4a-524a-11ea-b061-02420a00070b
+            label: RNAdat.csv
+            path: 003aaf4a-524a-11ea-b061-02420a00070b/e9798b9b-c354-4eae-ba93-106128fb79fa/RNAdat.csv
+            store: 0
+        position:
+          x: 95
+          y: 95
+        progress: 100
+        thumbnail: ''
+        version: 1.0.0
+  - - published
+    - '1'

@@ -1,0 +1,47 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "ab6a1254-524a-11ea-b940-02420a00070b",
+  "name": "[ISAN] opencor",
+  "description": "",
+  "thumbnail": "",
+  "prj_owner": "1",
+  "creation_date": "2020-02-18 12:32:04.513",
+  "last_change_date": "2020-02-18 12:32:38.546",
+  "workbench": {
+    "ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03": {
+      "key": "simcore/services/comp/osparc-opencor",
+      "version": "0.3.0",
+      "label": "osparc-opencor",
+      "inputs": {
+        "stimulation_mode": 1,
+        "stimulation_level": 0.5
+      },
+      "inputNodes": [],
+      "thumbnail": "",
+      "position": {
+        "x": 291,
+        "y": 267
+      }
+    },
+    "82d426a6-94ef-4a79-b575-623cccf062b3": {
+      "key": "simcore/services/dynamic/raw-graphs",
+      "version": "2.10.4",
+      "label": "2D plot",
+      "inputs": {
+        "input_1": {
+          "nodeUuid": "ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03",
+          "output": "membrane_potential_csv"
+        }
+      },
+      "inputNodes": [
+        "ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 598,
+        "y": 281
+      }
+    }
+  },
+  "published": "1"
+}

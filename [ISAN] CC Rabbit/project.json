@@ -1,0 +1,185 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "f5bb0778-524b-11ea-819c-02420a00070b",
+  "name": "[ISAN] CC Rabbit",
+  "description": "",
+  "thumbnail": "",
+  "prj_owner": "1",
+  "creation_date": "2020-02-18 12:41:18.692",
+  "last_change_date": "2020-02-21 09:58:45.498",
+  "workbench": {
+    "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e": {
+      "key": "simcore/services/frontend/file-picker",
+      "version": "1.0.0",
+      "label": "File Picker",
+      "inputs": {},
+      "inputNodes": [],
+      "thumbnail": "",
+      "outputs": {
+        "outFile": {
+          "store": 0,
+          "dataset": "f5bb0778-524b-11ea-819c-02420a00070b",
+          "path": "f5bb0778-524b-11ea-819c-02420a00070b/001dd1f0-e3f5-4695-8e26-e3dfd82dda8e/initial_WTstates_Rabbit.txt",
+          "label": "initial_WTstates_Rabbit.txt"
+        }
+      },
+      "progress": 100,
+      "position": {
+        "x": 31,
+        "y": 27
+      }
+    },
+    "27d897b6-52ae-4aa9-afb3-12fbc8d2891e": {
+      "key": "simcore/services/comp/rabbit-ss-0d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Rabbit SS 0D cardiac model",
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 300,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 165,
+        "tissue_size_tl": 165,
+        "Homogeneity": "homogeneous",
+        "initialWTStates": {
+          "nodeUuid": "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e",
+          "output": "outFile"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 305,
+        "y": 26
+      }
+    },
+    "6fe7f438-630b-429c-8d06-c036c2779cb2": {
+      "key": "simcore/services/comp/rabbit-ss-1d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Rabbit SS 1D cardiac model",
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 300,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 165,
+        "tissue_size_tl": 165,
+        "Homogeneity": "homogeneous",
+        "initialWTStates": {
+          "nodeUuid": "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e",
+          "output": "outFile"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 307,
+        "y": 197
+      }
+    },
+    "4f7f01dc-825d-4e42-99e3-78697d4de731": {
+      "key": "simcore/services/comp/rabbit-ss-2d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Rabbit SS 2D cardiac model",
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 10,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 65,
+        "tissue_size_tl": 65,
+        "Homogeneity": "homogeneous",
+        "input_from_1d": {
+          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "output": "output_4"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "6fe7f438-630b-429c-8d06-c036c2779cb2"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 510,
+        "y": 320
+      }
+    },
+    "7b103fe1-5650-4c96-add1-53927a30f7bb": {
+      "key": "simcore/services/dynamic/cc-0d-viewer",
+      "version": "3.0.4",
+      "label": "0D cardiac model viewer",
+      "inputs": {
+        "vm1Hz": {
+          "nodeUuid": "27d897b6-52ae-4aa9-afb3-12fbc8d2891e",
+          "output": "vm1Hz"
+        }
+      },
+      "inputNodes": [
+        "27d897b6-52ae-4aa9-afb3-12fbc8d2891e"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 730,
+        "y": 26
+      }
+    },
+    "e192edf5-bb7f-45f4-a47d-8970bc784cf8": {
+      "key": "simcore/services/dynamic/cc-1d-viewer",
+      "version": "3.0.3",
+      "label": "1D cardiac model viewer",
+      "inputs": {
+        "ECGs": {
+          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "output": "output_1"
+        },
+        "APs": {
+          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "output": "output_2"
+        }
+      },
+      "inputNodes": [
+        "6fe7f438-630b-429c-8d06-c036c2779cb2"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 733,
+        "y": 199
+      }
+    },
+    "52f7f296-9697-4c63-bfed-cd36694afd67": {
+      "key": "simcore/services/dynamic/cc-2d-viewer",
+      "version": "3.0.3",
+      "label": "2D cardiac model viewer",
+      "inputs": {
+        "ap": {
+          "nodeUuid": "4f7f01dc-825d-4e42-99e3-78697d4de731",
+          "output": "output_1"
+        }
+      },
+      "inputNodes": [
+        "4f7f01dc-825d-4e42-99e3-78697d4de731"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 741,
+        "y": 320
+      }
+    }
+  },
+  "published": "1"
+}

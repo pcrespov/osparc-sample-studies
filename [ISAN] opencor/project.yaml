@@ -1,0 +1,46 @@
+!!python/object/apply:collections.OrderedDict
+- - - type
+    - TEMPLATE
+  - - uuid
+    - ab6a1254-524a-11ea-b940-02420a00070b
+  - - name
+    - '[ISAN] opencor'
+  - - description
+    - ''
+  - - thumbnail
+    - ''
+  - - prj_owner
+    - '1'
+  - - creation_date
+    - '2020-02-18 12:32:04.513'
+  - - last_change_date
+    - '2020-02-18 12:32:38.546'
+  - - workbench
+    - 82d426a6-94ef-4a79-b575-623cccf062b3:
+        inputNodes:
+        - ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03
+        inputs:
+          input_1:
+            nodeUuid: ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03
+            output: membrane_potential_csv
+        key: simcore/services/dynamic/raw-graphs
+        label: 2D plot
+        position:
+          x: 598
+          y: 281
+        thumbnail: ''
+        version: 2.10.4
+      ab1869c1-1fd6-40e7-b73e-5b71c4f6bf03:
+        inputNodes: []
+        inputs:
+          stimulation_level: 0.5
+          stimulation_mode: 1
+        key: simcore/services/comp/osparc-opencor
+        label: osparc-opencor
+        position:
+          x: 291
+          y: 267
+        thumbnail: ''
+        version: 0.3.0
+  - - published
+    - '1'

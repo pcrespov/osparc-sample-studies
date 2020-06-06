@@ -1,0 +1,25 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "8cfbae2c-524b-11ea-9f65-02420a00070b",
+  "name": "[ISAN] Bornstein",
+  "description": "",
+  "thumbnail": "",
+  "prj_owner": "1",
+  "creation_date": "2020-02-18 12:38:22.954",
+  "last_change_date": "2020-02-18 12:41:10.522",
+  "workbench": {
+    "4b021656-b2fc-4559-aa5a-54f58678520e": {
+      "key": "simcore/services/dynamic/bornstein-dash",
+      "version": "1.0.2",
+      "label": "Bornstein-Dash",
+      "inputs": {},
+      "inputNodes": [],
+      "thumbnail": "",
+      "position": {
+        "x": 128,
+        "y": 82
+      }
+    }
+  },
+  "published": "1"
+}

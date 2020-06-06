@@ -1,0 +1,72 @@
+!!python/object/apply:collections.OrderedDict
+- - - type
+    - TEMPLATE
+  - - uuid
+    - 0b478e80-524b-11ea-b243-02420a00070b
+  - - name
+    - '[ISAN] 3D EM'
+  - - description
+    - ''
+  - - thumbnail
+    - ''
+  - - prj_owner
+    - '1'
+  - - creation_date
+    - '2020-02-18 12:34:45.348'
+  - - last_change_date
+    - '2020-02-18 12:37:26.402'
+  - - workbench
+    - 30272b4e-7d59-4bb8-9988-513aea9671eb:
+        inputNodes:
+        - cd0f60f7-b0dc-4e2a-b6fc-7343c94a7165
+        - 86fd8042-4ff0-443f-9c85-576418055de6
+        inputs:
+          A:
+            nodeUuid: cd0f60f7-b0dc-4e2a-b6fc-7343c94a7165
+            output: outFile
+          B:
+            nodeUuid: 86fd8042-4ff0-443f-9c85-576418055de6
+            output: outFile
+        key: simcore/services/dynamic/3d-viewer-gpu
+        label: 3d-viewer-gpu
+        position:
+          x: 393
+          y: 156
+        thumbnail: ''
+        version: 2.11.0
+      86fd8042-4ff0-443f-9c85-576418055de6:
+        inputNodes: []
+        inputs: {}
+        key: simcore/services/frontend/file-picker
+        label: File Picker_2
+        outputs:
+          outFile:
+            dataset: 0b478e80-524b-11ea-b243-02420a00070b
+            label: Neuron_MovieActionPotentialPropagation.zip
+            path: 0b478e80-524b-11ea-b243-02420a00070b/86fd8042-4ff0-443f-9c85-576418055de6/Neuron_MovieActionPotentialPropagation.zip
+            store: 0
+        position:
+          x: 83
+          y: 215
+        progress: 100
+        thumbnail: ''
+        version: 1.0.0
+      cd0f60f7-b0dc-4e2a-b6fc-7343c94a7165:
+        inputNodes: []
+        inputs: {}
+        key: simcore/services/frontend/file-picker
+        label: File Picker
+        outputs:
+          outFile:
+            dataset: 0b478e80-524b-11ea-b243-02420a00070b
+            label: EM_02mm.vtk
+            path: 0b478e80-524b-11ea-b243-02420a00070b/cd0f60f7-b0dc-4e2a-b6fc-7343c94a7165/EM_02mm.vtk
+            store: 0
+        position:
+          x: 83
+          y: 72
+        progress: 100
+        thumbnail: ''
+        version: 1.0.0
+  - - published
+    - '1'

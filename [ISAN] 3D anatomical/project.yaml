@@ -1,0 +1,51 @@
+!!python/object/apply:collections.OrderedDict
+- - - type
+    - TEMPLATE
+  - - uuid
+    - c0ab87ca-524a-11ea-a711-02420a00070b
+  - - name
+    - '[ISAN] 3D anatomical'
+  - - description
+    - ''
+  - - thumbnail
+    - ''
+  - - prj_owner
+    - '1'
+  - - creation_date
+    - '2020-02-18 12:32:40.174'
+  - - last_change_date
+    - '2020-02-18 12:34:40.84'
+  - - workbench
+    - a008fbe3-d4cf-42d9-8ca1-ec37d8a26dea:
+        inputNodes: []
+        inputs: {}
+        key: simcore/services/frontend/file-picker
+        label: File Picker
+        outputs:
+          outFile:
+            dataset: c0ab87ca-524a-11ea-a711-02420a00070b
+            label: Jeduk_New.zip
+            path: c0ab87ca-524a-11ea-a711-02420a00070b/a008fbe3-d4cf-42d9-8ca1-ec37d8a26dea/Jeduk_New.zip
+            store: 0
+        position:
+          x: 58
+          y: 93
+        progress: 100
+        thumbnail: ''
+        version: 1.0.0
+      e52c222c-4afc-4fa4-98d8-6b8e51f0b9d7:
+        inputNodes:
+        - a008fbe3-d4cf-42d9-8ca1-ec37d8a26dea
+        inputs:
+          A:
+            nodeUuid: a008fbe3-d4cf-42d9-8ca1-ec37d8a26dea
+            output: outFile
+        key: simcore/services/dynamic/3d-viewer-gpu
+        label: 3d-viewer-gpu
+        position:
+          x: 350
+          y: 93
+        thumbnail: ''
+        version: 2.11.0
+  - - published
+    - '1'

@@ -1,0 +1,157 @@
+!!python/object/apply:collections.OrderedDict
+- - - type
+    - TEMPLATE
+  - - uuid
+    - 33eb80e2-524c-11ea-a311-02420a00070b
+  - - name
+    - '[ISAN] CC Human'
+  - - description
+    - ''
+  - - thumbnail
+    - ''
+  - - prj_owner
+    - '1'
+  - - creation_date
+    - '2020-02-18 12:43:03.028'
+  - - last_change_date
+    - '2020-02-21 09:59:02.357'
+  - - workbench
+    - 037d93cf-0734-48a6-81b6-2dde2bf3f24c:
+        inputNodes: []
+        inputs: {}
+        key: simcore/services/frontend/file-picker
+        label: File Picker
+        outputs:
+          outFile:
+            dataset: 33eb80e2-524c-11ea-a311-02420a00070b
+            label: initial_WTStates_Human.txt
+            path: 33eb80e2-524c-11ea-a311-02420a00070b/037d93cf-0734-48a6-81b6-2dde2bf3f24c/initial_WTStates_Human.txt
+            store: 0
+        position:
+          x: 23
+          y: 44
+        progress: 100
+        thumbnail: ''
+        version: 1.0.0
+      0e30337a-21e0-4909-b3d3-7d3ffc68c9b6:
+        inputNodes:
+        - 8cfbf674-a9e1-4e6c-98e3-8aa382c067c6
+        inputs:
+          GKr: 1
+          Homogeneity: homogeneous
+          Na: 0
+          TargetHeartRatePhase1: 60
+          TargetHeartRatePhase2: 150
+          TargetHeartRatePhase3: 60
+          TotalSimulationTime: 10
+          cAMKII: WT
+          input_from_1d:
+            nodeUuid: 8cfbf674-a9e1-4e6c-98e3-8aa382c067c6
+            output: output_3
+          num_threads: 2
+          tissue_size_tl: 165
+          tissue_size_tw: 165
+        key: simcore/services/comp/human-gb-2d-cardiac-model
+        label: Human GB 2D cardiac model
+        position:
+          x: 462
+          y: 287
+        thumbnail: ''
+        version: 1.0.0
+      25dd1664-363f-4156-a3a4-b5d91eff7b01:
+        inputNodes:
+        - 0e30337a-21e0-4909-b3d3-7d3ffc68c9b6
+        inputs:
+          ap:
+            nodeUuid: 0e30337a-21e0-4909-b3d3-7d3ffc68c9b6
+            output: output_1
+        key: simcore/services/dynamic/cc-2d-viewer
+        label: 2D cardiac model viewer
+        position:
+          x: 689
+          y: 287
+        thumbnail: ''
+        version: 3.0.3
+      66610243-a8ce-42c9-bcef-a0c85ea79d1a:
+        inputNodes:
+        - 8cfbf674-a9e1-4e6c-98e3-8aa382c067c6
+        inputs:
+          APs:
+            nodeUuid: 8cfbf674-a9e1-4e6c-98e3-8aa382c067c6
+            output: output_2
+          ECGs:
+            nodeUuid: 8cfbf674-a9e1-4e6c-98e3-8aa382c067c6
+            output: output_1
+        key: simcore/services/dynamic/cc-1d-viewer
+        label: 1D cardiac model viewer
+        position:
+          x: 680
+          y: 170
+        thumbnail: ''
+        version: 3.0.3
+      8cfbf674-a9e1-4e6c-98e3-8aa382c067c6:
+        inputNodes:
+        - 037d93cf-0734-48a6-81b6-2dde2bf3f24c
+        inputs:
+          GKr: 1
+          Homogeneity: homogeneous
+          Na: 0
+          TargetHeartRatePhase1: 60
+          TargetHeartRatePhase2: 150
+          TargetHeartRatePhase3: 60
+          TotalSimulationTime: 300
+          cAMKII: WT
+          initialWTStates:
+            nodeUuid: 037d93cf-0734-48a6-81b6-2dde2bf3f24c
+            output: outFile
+          num_threads: 2
+          tissue_size_tl: 165
+          tissue_size_tw: 165
+        key: simcore/services/comp/human-gb-1d-cardiac-model
+        label: Human GB 1D cardiac model
+        position:
+          x: 261
+          y: 171
+        thumbnail: ''
+        version: 1.0.0
+      bbcd45f9-5798-402a-859b-de070221a915:
+        inputNodes:
+        - 037d93cf-0734-48a6-81b6-2dde2bf3f24c
+        inputs:
+          GKr: 1
+          Homogeneity: homogeneous
+          Na: 0
+          TargetHeartRatePhase1: 60
+          TargetHeartRatePhase2: 150
+          TargetHeartRatePhase3: 60
+          TotalSimulationTime: 300
+          cAMKII: WT
+          initialWTStates:
+            nodeUuid: 037d93cf-0734-48a6-81b6-2dde2bf3f24c
+            output: outFile
+          num_threads: 2
+          tissue_size_tl: 165
+          tissue_size_tw: 165
+        key: simcore/services/comp/human-gb-0d-cardiac-model
+        label: Human GB 0D cardiac model
+        position:
+          x: 259
+          y: 13
+        thumbnail: ''
+        version: 1.0.0
+      dafd373b-f8e0-4daa-8a87-b0113e2a95f1:
+        inputNodes:
+        - bbcd45f9-5798-402a-859b-de070221a915
+        inputs:
+          vm1Hz:
+            nodeUuid: bbcd45f9-5798-402a-859b-de070221a915
+            output: vm1Hz
+        key: simcore/services/dynamic/cc-0d-viewer
+        label: 0D cardiac model viewer
+        position:
+          x: 678
+          y: 13
+        thumbnail: ''
+        version: 3.0.4
+  - - published
+    - '1'

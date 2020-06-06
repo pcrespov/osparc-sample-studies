@@ -1,0 +1,25 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "6c5fa7ba-524b-11ea-a21e-02420a00070b",
+  "name": "[ISAN] Mattward",
+  "description": "",
+  "thumbnail": "",
+  "prj_owner": "1",
+  "creation_date": "2020-02-18 12:37:28.245",
+  "last_change_date": "2020-02-18 12:38:21.714",
+  "workbench": {
+    "25b1896a-4ea6-4fd9-9987-493354f3b0a9": {
+      "key": "simcore/services/dynamic/mattward-dash",
+      "version": "1.0.2",
+      "label": "MattWard-Dash",
+      "inputs": {},
+      "inputNodes": [],
+      "thumbnail": "",
+      "position": {
+        "x": 124,
+        "y": 89
+      }
+    }
+  },
+  "published": "1"
+}
