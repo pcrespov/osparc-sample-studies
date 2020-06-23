@@ -1,14 +1,14 @@
 {
   "type": "TEMPLATE",
-  "uuid": "194bb264-a717-11e9-9dff-02420aff2767",
-  "name": "[ISAN] osparc-opencor",
-  "description": "",
-  "thumbnail": "",
-  "prj_owner": "1",
-  "creation_date": "2019-07-15 15:42:06.208",
-  "last_change_date": "2019-07-15 15:42:06.208",
+  "uuid": "0da37066-acb3-11e9-a6c7-02420aff77ac",
+  "name": "Opencor py model",
+  "description": "Computes the cardiac myocyte action potential for the sympathetic drive input setting on the MAP-Core portal.",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/7/4/banner.jpg",
+  "prj_owner": "6",
+  "creation_date": "2019-07-22 19:01:04.197",
+  "last_change_date": "2019-07-22 19:01:04.197",
   "workbench": {
-    "f631a142-d3b6-435d-abfb-8ad4acb91a70": {
+    "8b706b34-8c05-5e50-8313-37f578b7638d": {
       "key": "simcore/services/comp/osparc-opencor",
       "version": "0.3.0",
       "label": "osparc-opencor",
@@ -22,32 +22,33 @@
       "progress": 0,
       "thumbnail": "",
       "position": {
-        "x": 587,
-        "y": 279
+        "x": 99,
+        "y": 95
       }
     },
-    "744c9209-0450-4272-8357-4a08cf7f8458": {
+    "b547dbf5-0bbe-5f5b-a9f6-2c7fb9af6dc1": {
       "key": "simcore/services/dynamic/raw-graphs",
-      "version": "2.10.2",
+      "version": "2.10.5",
       "label": "2D plot",
       "inputs": {
         "input_1": {
-          "nodeUuid": "f631a142-d3b6-435d-abfb-8ad4acb91a70",
+          "nodeUuid": "8b706b34-8c05-5e50-8313-37f578b7638d",
           "output": "membrane_potential_csv"
         }
       },
       "inputNodes": [
-        "f631a142-d3b6-435d-abfb-8ad4acb91a70"
+        "8b706b34-8c05-5e50-8313-37f578b7638d"
       ],
       "outputNode": false,
       "outputs": {},
       "progress": 100,
       "thumbnail": "",
       "position": {
-        "x": 933,
-        "y": 228
+        "x": 390,
+        "y": 95
       }
     }
   },
-  "published": "1"
+  "published": "1",
+  "access_rights": "{\"1\": \"rwx\"}"
 }

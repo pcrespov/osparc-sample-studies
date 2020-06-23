@@ -1,35 +1,35 @@
 {
   "type": "TEMPLATE",
-  "uuid": "f5bb0778-524b-11ea-819c-02420a00070b",
-  "name": "[ISAN] CC Rabbit",
-  "description": "",
-  "thumbnail": "",
-  "prj_owner": "1",
-  "creation_date": "2020-02-18 12:41:18.692",
-  "last_change_date": "2020-02-21 09:58:45.498",
+  "uuid": "47d0b766-af53-11e9-a62b-02420aff7e72",
+  "name": "Rabbit cardiac models",
+  "description": "The workflow integrates multistep single-cell, 1D and 2D model simulations in a single automated process. The model formulation for ventricular cells from rabbits (Soltis-Saucerman*) was implemented in the workflow. The model contains beta-adrenergic signaling pathways, and the firing rate model (unpublished Lewis model).",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/4/14/banner.jpg",
+  "prj_owner": "6",
+  "creation_date": "2019-07-26 03:13:05.826",
+  "last_change_date": "2019-07-26 03:13:27.151",
   "workbench": {
-    "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e": {
+    "c258dbcb-3d00-5a20-8c59-5933e14fb4d8": {
       "key": "simcore/services/frontend/file-picker",
       "version": "1.0.0",
       "label": "File Picker",
       "inputs": {},
       "inputNodes": [],
-      "thumbnail": "",
+      "outputNode": false,
       "outputs": {
         "outFile": {
           "store": 0,
-          "dataset": "f5bb0778-524b-11ea-819c-02420a00070b",
-          "path": "f5bb0778-524b-11ea-819c-02420a00070b/001dd1f0-e3f5-4695-8e26-e3dfd82dda8e/initial_WTstates_Rabbit.txt",
-          "label": "initial_WTstates_Rabbit.txt"
+          "path": "47d0b766-af53-11e9-a62b-02420aff7e72/c258dbcb-3d00-5a20-8c59-5933e14fb4d8/initial_WTstates_Rabbit.txt",
+          "label": "initial_WTstates_Rabbit"
         }
       },
       "progress": 100,
+      "thumbnail": "",
       "position": {
-        "x": 31,
-        "y": 27
+        "x": 55,
+        "y": 126
       }
     },
-    "27d897b6-52ae-4aa9-afb3-12fbc8d2891e": {
+    "438435b1-9beb-5d01-b527-8e89888e39b4": {
       "key": "simcore/services/comp/rabbit-ss-0d-cardiac-model",
       "version": "1.0.0",
       "label": "Rabbit SS 0D cardiac model",
@@ -45,21 +45,24 @@
         "tissue_size_tl": 165,
         "Homogeneity": "homogeneous",
         "initialWTStates": {
-          "nodeUuid": "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e",
+          "nodeUuid": "c258dbcb-3d00-5a20-8c59-5933e14fb4d8",
           "output": "outFile"
         },
         "num_threads": 2
       },
       "inputNodes": [
-        "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e"
+        "c258dbcb-3d00-5a20-8c59-5933e14fb4d8"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
       "thumbnail": "",
       "position": {
-        "x": 305,
-        "y": 26
+        "x": 286,
+        "y": 31
       }
     },
-    "6fe7f438-630b-429c-8d06-c036c2779cb2": {
+    "9d6700e6-c755-5dcc-bb47-45bf76f23644": {
       "key": "simcore/services/comp/rabbit-ss-1d-cardiac-model",
       "version": "1.0.0",
       "label": "Rabbit SS 1D cardiac model",
@@ -75,21 +78,24 @@
         "tissue_size_tl": 165,
         "Homogeneity": "homogeneous",
         "initialWTStates": {
-          "nodeUuid": "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e",
+          "nodeUuid": "c258dbcb-3d00-5a20-8c59-5933e14fb4d8",
           "output": "outFile"
         },
         "num_threads": 2
       },
       "inputNodes": [
-        "001dd1f0-e3f5-4695-8e26-e3dfd82dda8e"
+        "c258dbcb-3d00-5a20-8c59-5933e14fb4d8"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
       "thumbnail": "",
       "position": {
-        "x": 307,
-        "y": 197
+        "x": 283,
+        "y": 243
       }
     },
-    "4f7f01dc-825d-4e42-99e3-78697d4de731": {
+    "76e363c9-4eba-5040-a8ae-0a122519fba8": {
       "key": "simcore/services/comp/rabbit-ss-2d-cardiac-model",
       "version": "1.0.0",
       "label": "Rabbit SS 2D cardiac model",
@@ -105,81 +111,94 @@
         "tissue_size_tl": 65,
         "Homogeneity": "homogeneous",
         "input_from_1d": {
-          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "nodeUuid": "9d6700e6-c755-5dcc-bb47-45bf76f23644",
           "output": "output_4"
         },
         "num_threads": 2
       },
       "inputNodes": [
-        "6fe7f438-630b-429c-8d06-c036c2779cb2"
+        "9d6700e6-c755-5dcc-bb47-45bf76f23644"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
       "thumbnail": "",
       "position": {
-        "x": 510,
-        "y": 320
+        "x": 526,
+        "y": 350
       }
     },
-    "7b103fe1-5650-4c96-add1-53927a30f7bb": {
+    "83774d27-4a47-5439-977c-acd9fb9c5ce4": {
       "key": "simcore/services/dynamic/cc-0d-viewer",
       "version": "3.0.4",
       "label": "0D cardiac model viewer",
       "inputs": {
         "vm1Hz": {
-          "nodeUuid": "27d897b6-52ae-4aa9-afb3-12fbc8d2891e",
+          "nodeUuid": "438435b1-9beb-5d01-b527-8e89888e39b4",
           "output": "vm1Hz"
         }
       },
       "inputNodes": [
-        "27d897b6-52ae-4aa9-afb3-12fbc8d2891e"
+        "438435b1-9beb-5d01-b527-8e89888e39b4"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
       "thumbnail": "",
       "position": {
-        "x": 730,
-        "y": 26
+        "x": 772,
+        "y": 33
       }
     },
-    "e192edf5-bb7f-45f4-a47d-8970bc784cf8": {
+    "567fbe22-18f0-58a9-b9ac-2f1d00a010a0": {
       "key": "simcore/services/dynamic/cc-1d-viewer",
       "version": "3.0.3",
       "label": "1D cardiac model viewer",
       "inputs": {
         "ECGs": {
-          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "nodeUuid": "9d6700e6-c755-5dcc-bb47-45bf76f23644",
           "output": "output_1"
         },
         "APs": {
-          "nodeUuid": "6fe7f438-630b-429c-8d06-c036c2779cb2",
+          "nodeUuid": "9d6700e6-c755-5dcc-bb47-45bf76f23644",
           "output": "output_2"
         }
       },
       "inputNodes": [
-        "6fe7f438-630b-429c-8d06-c036c2779cb2"
+        "9d6700e6-c755-5dcc-bb47-45bf76f23644"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
       "thumbnail": "",
       "position": {
-        "x": 733,
-        "y": 199
+        "x": 779,
+        "y": 241
       }
     },
-    "52f7f296-9697-4c63-bfed-cd36694afd67": {
+    "33c7f84a-1c2a-556c-a652-aa60cd595a85": {
       "key": "simcore/services/dynamic/cc-2d-viewer",
       "version": "3.0.3",
       "label": "2D cardiac model viewer",
       "inputs": {
         "ap": {
-          "nodeUuid": "4f7f01dc-825d-4e42-99e3-78697d4de731",
+          "nodeUuid": "76e363c9-4eba-5040-a8ae-0a122519fba8",
           "output": "output_1"
         }
       },
       "inputNodes": [
-        "4f7f01dc-825d-4e42-99e3-78697d4de731"
+        "76e363c9-4eba-5040-a8ae-0a122519fba8"
       ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
       "thumbnail": "",
       "position": {
-        "x": 741,
-        "y": 320
+        "x": 782,
+        "y": 350
       }
     }
   },
-  "published": "1"
+  "published": "1",
+  "access_rights": "{\"1\": \"rwx\"}"
 }
