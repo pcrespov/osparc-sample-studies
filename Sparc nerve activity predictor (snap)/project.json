@@ -1,0 +1,29 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "fc9038ca-acb3-11e9-9aea-02420aff77ac",
+  "name": "Sparc nerve activity predictor (snap)",
+  "description": "Interactive, AI-informed computational model of stimulus parameter-dependent vagal nerve responses resulting from bipolar, constant-current stimuli.",
+  "thumbnail": "https://discover.blackfynn.com/dataset-assets/6/7/banner.jpg",
+  "prj_owner": "6",
+  "creation_date": "2019-07-22 19:07:45.271",
+  "last_change_date": "2019-07-22 19:07:45.271",
+  "workbench": {
+    "9df39969-9e7d-57bb-87d3-879e9423710e": {
+      "key": "simcore/services/dynamic/mattward-viewer",
+      "version": "3.0.4",
+      "label": "mattward-viewer",
+      "inputs": {},
+      "inputNodes": [],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
+      "thumbnail": "",
+      "position": {
+        "x": 134,
+        "y": 135
+      }
+    }
+  },
+  "published": "1",
+  "access_rights": "{\"1\": \"rwx\"}"
+}
