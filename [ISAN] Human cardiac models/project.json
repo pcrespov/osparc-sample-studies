@@ -1,0 +1,214 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "c7264592-af54-11e9-8346-02420aff7e72",
+  "name": "[ISAN] Human cardiac models",
+  "description": "The workflow integrates multistep single-cell, 1D and 2D model simulations in a single automated process. The model formulation for ventricular cells from humans (Grandi-Bers*) are implemented in the workflow. The model contains beta-adrenergic signaling pathways, and the firing rate model (unpublished Lewis model).",
+  "thumbnail": "https://discover.blackfynn.com/dataset-assets/17/5/banner.jpg",
+  "prj_owner": "6",
+  "creation_date": "2019-07-26 03:23:49.017",
+  "last_change_date": "2019-07-26 03:24:06.438",
+  "workbench": {
+    "9fa2c3c5-b15e-5a0b-8dad-025c81374960": {
+      "key": "simcore/services/frontend/file-picker",
+      "version": "1.0.0",
+      "label": "File Picker",
+      "inputs": {},
+      "inputNodes": [],
+      "outputNode": false,
+      "outputs": {
+        "outFile": {
+          "store": 0,
+          "path": "c7264592-af54-11e9-8346-02420aff7e72/9fa2c3c5-b15e-5a0b-8dad-025c81374960/initial_WTStates_Human.txt",
+          "label": "initial_WTStates_Human"
+        }
+      },
+      "progress": 100,
+      "thumbnail": "",
+      "position": {
+        "x": 39,
+        "y": 120
+      }
+    },
+    "76f0bf38-a32a-5860-8aa3-a5351e02760b": {
+      "key": "simcore/services/comp/human-gb-0d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Human GB 0D cardiac model",
+      "inputAccess": {
+        "TargetHeartRatePhase1": "ReadOnly",
+        "TargetHeartRatePhase2": "ReadOnly",
+        "TargetHeartRatePhase3": "ReadOnly"
+      },
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 300,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 165,
+        "tissue_size_tl": 165,
+        "Homogeneity": "homogeneous",
+        "initialWTStates": {
+          "nodeUuid": "9fa2c3c5-b15e-5a0b-8dad-025c81374960",
+          "output": "outFile"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "9fa2c3c5-b15e-5a0b-8dad-025c81374960"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
+      "thumbnail": "",
+      "position": {
+        "x": 282,
+        "y": 39
+      }
+    },
+    "2e30e868-ef47-591c-b3fa-1f208d557604": {
+      "key": "simcore/services/comp/human-gb-1d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Human GB 1D cardiac model",
+      "inputAccess": {
+        "TargetHeartRatePhase1": "ReadOnly",
+        "TargetHeartRatePhase2": "ReadOnly",
+        "TargetHeartRatePhase3": "ReadOnly"
+      },
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 300,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 165,
+        "tissue_size_tl": 165,
+        "Homogeneity": "homogeneous",
+        "initialWTStates": {
+          "nodeUuid": "9fa2c3c5-b15e-5a0b-8dad-025c81374960",
+          "output": "outFile"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "9fa2c3c5-b15e-5a0b-8dad-025c81374960"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
+      "thumbnail": "",
+      "position": {
+        "x": 283,
+        "y": 211
+      }
+    },
+    "21f5a2d3-a97f-524a-8e70-4533e4c2eb66": {
+      "key": "simcore/services/comp/human-gb-2d-cardiac-model",
+      "version": "1.0.0",
+      "label": "Human GB 2D cardiac model",
+      "inputs": {
+        "Na": 0,
+        "GKr": 1,
+        "TotalSimulationTime": 10,
+        "TargetHeartRatePhase1": 60,
+        "TargetHeartRatePhase2": 150,
+        "TargetHeartRatePhase3": 60,
+        "cAMKII": "WT",
+        "tissue_size_tw": 165,
+        "tissue_size_tl": 165,
+        "Homogeneity": "homogeneous",
+        "input_from_1d": {
+          "nodeUuid": "2e30e868-ef47-591c-b3fa-1f208d557604",
+          "output": "output_3"
+        },
+        "num_threads": 2
+      },
+      "inputNodes": [
+        "2e30e868-ef47-591c-b3fa-1f208d557604"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 0,
+      "thumbnail": "",
+      "position": {
+        "x": 527,
+        "y": 336
+      }
+    },
+    "168bf776-80ef-51aa-8d78-e5b91c0f7753": {
+      "key": "simcore/services/dynamic/cc-0d-viewer",
+      "version": "3.0.4",
+      "label": "0D cardiac model viewer",
+      "inputs": {
+        "vm1Hz": {
+          "nodeUuid": "76f0bf38-a32a-5860-8aa3-a5351e02760b",
+          "output": "vm1Hz"
+        }
+      },
+      "inputNodes": [
+        "76f0bf38-a32a-5860-8aa3-a5351e02760b"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
+      "thumbnail": "",
+      "position": {
+        "x": 802,
+        "y": 35
+      }
+    },
+    "b922304c-7a85-53c7-975e-ed01eb7c861d": {
+      "key": "simcore/services/dynamic/cc-1d-viewer",
+      "version": "3.0.3",
+      "label": "1D cardiac model viewer",
+      "inputs": {
+        "ECGs": {
+          "nodeUuid": "2e30e868-ef47-591c-b3fa-1f208d557604",
+          "output": "output_1"
+        },
+        "APs": {
+          "nodeUuid": "2e30e868-ef47-591c-b3fa-1f208d557604",
+          "output": "output_2"
+        }
+      },
+      "inputNodes": [
+        "2e30e868-ef47-591c-b3fa-1f208d557604"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
+      "thumbnail": "",
+      "position": {
+        "x": 808,
+        "y": 209
+      }
+    },
+    "d7756411-2cbf-534d-a488-1ea2289fcd65": {
+      "key": "simcore/services/dynamic/cc-2d-viewer",
+      "version": "3.0.3",
+      "label": "2D cardiac model viewer",
+      "inputs": {
+        "ap": {
+          "nodeUuid": "21f5a2d3-a97f-524a-8e70-4533e4c2eb66",
+          "output": "output_1"
+        }
+      },
+      "inputNodes": [
+        "21f5a2d3-a97f-524a-8e70-4533e4c2eb66"
+      ],
+      "outputNode": false,
+      "outputs": {},
+      "progress": 100,
+      "thumbnail": "",
+      "position": {
+        "x": 802,
+        "y": 335
+      }
+    }
+  },
+  "published": "1",
+  "access_rights": "{\"1\": \"rwx\"}"
+}

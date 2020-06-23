@@ -1,0 +1,49 @@
+{
+  "type": "TEMPLATE",
+  "uuid": "804e859a-a0e6-11ea-978b-02420a0002ec",
+  "name": "Kember Cardiac Model ",
+  "description": "## Model of autonomic control of cardiac function\n\nThe workflow contains a model of autonomic nervous activity and heart rate. Additionally, a pre-instantiated jupyter notebook is connected that plots the results of simulation. The model here is described in a publication: Recurrent myocardial infarction: Mechanisms of free-floating adaptation and autonomic derangement in networked cardiac neural control.\n\n**Reference:**\n\n*Kember G., Ardell J.L., Shivkumar K., Armour J.A. (2017). Recurrent myocardial infarction: Mechanisms of free-floating adaptation and autonomic derangement in networked cardiac neural control. PLoS One. 12(7):e0180194. doi:10.1371/journal.pone.0180194",
+  "thumbnail": "",
+  "prj_owner": "18",
+  "creation_date": "2020-05-28 13:24:04.374",
+  "last_change_date": "2020-05-28 13:24:04.374",
+  "workbench": {
+    "06b0fcc8-30be-4960-935b-4545baf6239a": {
+      "key": "simcore/services/comp/kember-cardiac-model",
+      "version": "1.0.0",
+      "label": "Kember cardiac model",
+      "inputs": {
+        "dt": 0.01,
+        "T": 1000,
+        "forcing_factor": 0
+      },
+      "inputNodes": [],
+      "thumbnail": "",
+      "position": {
+        "x": 461,
+        "y": 301
+      }
+    },
+    "ff9c5a3a-bbf6-4a47-aafa-7c6246332c5c": {
+      "key": "simcore/services/dynamic/kember-viewer",
+      "version": "2.10.0",
+      "label": "kember-viewer",
+      "inputs": {
+        "outputController": {
+          "nodeUuid": "06b0fcc8-30be-4960-935b-4545baf6239a",
+          "output": "out_1"
+        }
+      },
+      "inputNodes": [
+        "06b0fcc8-30be-4960-935b-4545baf6239a"
+      ],
+      "thumbnail": "",
+      "position": {
+        "x": 739,
+        "y": 301
+      }
+    }
+  },
+  "published": "1",
+  "access_rights": "{\"1\": \"rwx\"}"
+}
