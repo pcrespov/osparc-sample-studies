@@ -170,13 +170,13 @@ def match_projects(production_projects: List[Project]) -> Path:
 def main():
 
     db_projects = load_projects_from_csv(current_dir / "production-published.csv")
-    match_projects(db_projects)
+    ## match_projects(db_projects)
 
     write_jsons(db_projects)
 
     projects = load_projects_in_repo()
     write_readme(projects)
-    write_summary(projects)
+    ## write_summary(projects)
 
 
 if __name__ == "__main__":
