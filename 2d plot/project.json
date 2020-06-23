@@ -3,7 +3,7 @@
   "uuid": "0d475cde-acb5-11e9-a8d6-02420aff77ac",
   "name": "2d plot",
   "description": "Interactive example for plotting gene expression using the RAW Graphs platform. Data are obtained from Prof. Leah Reznikov at University of Florida.",
-  "thumbnail": "https://discover.blackfynn.com/dataset-assets/8/7/banner.jpg",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/8/7/banner.jpg",
   "prj_owner": "6",
   "creation_date": "2019-07-22 19:15:24.816",
   "last_change_date": "2019-07-22 19:15:24.816",

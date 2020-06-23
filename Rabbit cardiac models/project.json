@@ -3,7 +3,7 @@
   "uuid": "47d0b766-af53-11e9-a62b-02420aff7e72",
   "name": "Rabbit cardiac models",
   "description": "The workflow integrates multistep single-cell, 1D and 2D model simulations in a single automated process. The model formulation for ventricular cells from rabbits (Soltis-Saucerman*) was implemented in the workflow. The model contains beta-adrenergic signaling pathways, and the firing rate model (unpublished Lewis model).",
-  "thumbnail": "https://discover.blackfynn.com/dataset-assets/4/14/banner.jpg",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/4/14/banner.jpg",
   "prj_owner": "6",
   "creation_date": "2019-07-26 03:13:05.826",
   "last_change_date": "2019-07-26 03:13:27.151",

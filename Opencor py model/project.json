@@ -3,7 +3,7 @@
   "uuid": "0da37066-acb3-11e9-a6c7-02420aff77ac",
   "name": "Opencor py model",
   "description": "Computes the cardiac myocyte action potential for the sympathetic drive input setting on the MAP-Core portal.",
-  "thumbnail": "https://discover.blackfynn.com/dataset-assets/7/4/banner.jpg",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/7/4/banner.jpg",
   "prj_owner": "6",
   "creation_date": "2019-07-22 19:01:04.197",
   "last_change_date": "2019-07-22 19:01:04.197",

@@ -3,7 +3,7 @@
   "uuid": "c7264592-af54-11e9-8346-02420aff7e72",
   "name": "Human cardiac models",
   "description": "The workflow integrates multistep single-cell, 1D and 2D model simulations in a single automated process. The model formulation for ventricular cells from humans (Grandi-Bers*) are implemented in the workflow. The model contains beta-adrenergic signaling pathways, and the firing rate model (unpublished Lewis model).",
-  "thumbnail": "https://discover.blackfynn.com/dataset-assets/17/5/banner.jpg",
+  "thumbnail": "https://assets.discover.blackfynn.com/dataset-assets/17/5/banner.jpg",
   "prj_owner": "6",
   "creation_date": "2019-07-26 03:23:49.017",
   "last_change_date": "2019-07-26 03:24:06.438",
