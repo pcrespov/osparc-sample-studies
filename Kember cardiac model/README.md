@@ -1,6 +1,4 @@
 # Kember cardiac model
-[![master.dev](https://img.shields.io/website?down_message=offline&label=master.dev&up_message=run&url=https%3A//osparc01.speag.com)](https://osparc01.speag.com/study/804e859a-a0e6-11ea-978b-02420a0002ec)
-[![staging](https://img.shields.io/website?down_message=offline&label=staging&up_message=run&url=https%3A//staging.osparc.io)](https://staging.osparc.io/study/804e859a-a0e6-11ea-978b-02420a0002ec)
 [![osparc.io](https://img.shields.io/website?down_message=offline&label=osparc.io&up_message=run&url=https%3A//osparc.io)](https://osparc.io/study/804e859a-a0e6-11ea-978b-02420a0002ec)
 
 ## Model of autonomic control of cardiac function
